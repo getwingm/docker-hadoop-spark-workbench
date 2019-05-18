@@ -9,3 +9,7 @@ example: get-example
 
 clean-example:
 	docker exec -it namenode hadoop fs -rm -r /tmp/numbers-as-text
+
+spark-app:
+	docker-compose -f docker-compose-spark-app.yml build
+	docker-compose -f docker-compose-spark-app.yml up
